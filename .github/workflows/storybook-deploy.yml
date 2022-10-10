@@ -1,0 +1,30 @@
+name: storybook deployment
+on:
+  push:
+    branches:
+      - master
+      - storybook
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: install
+        run: yarn install
+      - name: build
+        run: yarn run build
+      - name: build-storybook
+        run: |
+          git config --global user.email "njkznu@gmail.com"
+          git config --global user.name "kuzanatoliy"
+          git add -f storybook-static
+          git commit -am "deploy to gh-pages"
+          git push origin `git subtree split --prefix storybook-static`:refs/heads/gh-pages --force
+          git reset --hard HEAD~1
