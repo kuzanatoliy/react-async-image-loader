@@ -1,0 +1,10 @@
+{
+  "name": "react-async-image-loader",
+  "version": "1.0.0",
+  "description": "Async image loader for react library",
+  "main": "index.ts",
+  "repository": "https://github.com/kuzanatoliy/react-async-image-loader.git",
+  "author": "njkznu@gmail.com",
+  "license": "MIT",
+  "private": false
+}
