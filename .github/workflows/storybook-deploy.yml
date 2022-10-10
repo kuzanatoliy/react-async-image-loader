@@ -19,8 +19,8 @@ jobs:
       - name: install
         run: yarn install
       - name: build
-        run: yarn run build
-      - name: build-storybook
+        run: yarn run build-storybook
+      - name: publish
         run: |
           git config --global user.email "njkznu@gmail.com"
           git config --global user.name "kuzanatoliy"
