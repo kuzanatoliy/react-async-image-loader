@@ -1,0 +1,17 @@
+{
+  "name": "react-async-image-loader",
+  "version": "1.0.0",
+  "description": "Async image loader for react library",
+  "scripts": {
+    "prettier:write": "prettier --write .",
+    "prettier:check": "prettier --check ."
+  },
+  "repository": "https://github.com/kuzanatoliy/react-async-image-loader.git",
+  "author": "njkznu@gmail.com",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "husky": "^8.0.1",
+    "prettier": "^2.7.1"
+  }
+}
