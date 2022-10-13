@@ -6,9 +6,13 @@ export interface IUseAsyncImageLoaderResult {
   errorMessage: string | null;
 }
 
-export type IUseAsyncImageLoader = (uri: string) => IUseAsyncImageLoaderResult;
+export interface IUseAsyncImageLoaderProps {
+  uri: string;
+}
 
-export const useAsyncImageLoader: IUseAsyncImageLoader = (uri: string) => {
+export type IUseAsyncImageLoader = (props: IUseAsyncImageLoaderProps) => IUseAsyncImageLoaderResult;
+
+export const useAsyncImageLoader: IUseAsyncImageLoader = ({ uri }) => {
   const [data, setData] = useState<IUseAsyncImageLoaderResult>({
     image: null,
     isLoading: true,
