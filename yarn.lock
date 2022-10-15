@@ -1600,12 +1600,13 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
-"@kuzanatoliorg/testing-library-react-utils@^1.3.0":
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/@kuzanatoliorg/testing-library-react-utils/-/testing-library-react-utils-1.3.0.tgz#4651832f0343fdfca7f6222b6212640ad938ddfd"
-  integrity sha512-BLBk7bNTnQBmCiK3CF6GovH2rU/p+CXmTJVLfbdEP+vHM6v3emIRAYv/atdVJT3BRQVjm4dpCFym6anEa/JzUQ==
+"@kuzanatoliorg/testing-library-react-utils@^1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@kuzanatoliorg/testing-library-react-utils/-/testing-library-react-utils-1.5.0.tgz#c40dfdc5b00f628034e4ec59658dd54527b89508"
+  integrity sha512-OxCbEXGXzZE0HjBFtT/Wd/apUN7chOexoPE3YGLyIkNSgF2C9TaYAdjyWdMlNir/Eh2JMbhhsp/GmkIKmSn+MQ==
   dependencies:
     "@testing-library/react" ">=13.0.0"
+    "@testing-library/react-hooks" ">=8.0.0"
     react ">=18.0.0"
     react-dom ">=18.0.0"
 
@@ -2715,6 +2716,14 @@
     dom-accessibility-api "^0.5.9"
     lz-string "^1.4.4"
     pretty-format "^27.0.2"
+
+"@testing-library/react-hooks@>=8.0.0", "@testing-library/react-hooks@^8.0.1":
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/@testing-library/react-hooks/-/react-hooks-8.0.1.tgz#0924bbd5b55e0c0c0502d1754657ada66947ca12"
+  integrity sha512-Aqhl2IVmLt8IovEVarNDFuJDVWVvhnr9/GCU6UUnrYXwgDFF9h2L2o2P9KBni1AST5sT6riAyoukFLyjQUgD/g==
+  dependencies:
+    "@babel/runtime" "^7.12.5"
+    react-error-boundary "^3.1.0"
 
 "@testing-library/react@>=13.0.0", "@testing-library/react@^13.4.0":
   version "13.4.0"
@@ -9571,6 +9580,13 @@ react-element-to-jsx-string@^14.3.4:
     "@base2/pretty-print-object" "1.0.1"
     is-plain-object "5.0.0"
     react-is "17.0.2"
+
+react-error-boundary@^3.1.0:
+  version "3.1.4"
+  resolved "https://registry.yarnpkg.com/react-error-boundary/-/react-error-boundary-3.1.4.tgz#255db92b23197108757a888b01e5b729919abde0"
+  integrity sha512-uM9uPzZJTF6wRQORmSrvOIgt4lJ9MC1sNgEOj2XGsDTRE4kmpWxg7ENK9EWNKJRMAOY9z0MuF4yIfl6gp4sotA==
+  dependencies:
+    "@babel/runtime" "^7.12.5"
 
 react-inspector@^5.1.0:
   version "5.1.1"

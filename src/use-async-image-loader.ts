@@ -22,10 +22,10 @@ export const useAsyncImageLoader: IUseAsyncImageLoader = ({ uri }) => {
   useEffect(() => {
     fetch(uri)
       .then((res) => res.blob())
-      .then((blob) => setData({ ...data, image: URL.createObjectURL(blob) }))
-      .catch((error) => setData({ ...data, errorMessage: error.message }))
+      .then((blob) => setData((prevState) => ({ ...prevState, image: URL.createObjectURL(blob) })))
+      .catch((error) => setData((prevState) => ({ ...prevState, errorMessage: error.message })))
       .finally(() => {
-        setData({ ...data, isLoading: false });
+        setData((prevState) => ({ ...prevState, isLoading: false }));
       });
   }, []);
 
