@@ -32,7 +32,7 @@ export const useAsyncImageLoader: IUseAsyncImageLoader = ({ uri }) => {
         setData((prevState) => ({ ...prevState, isLoading: false }));
       });
 
-    () => controller.abort();
+    return () => controller.abort();
   }, []);
 
   return data;

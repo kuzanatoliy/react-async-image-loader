@@ -22,7 +22,7 @@ describe('use-async-image-loader', () => {
       });
     });
 
-    URL.createObjectURL = (value) => value.toString();
+    URL.createObjectURL = jest.fn().mockImplementation((value) => value.toString());
   });
 
   afterAll(() => {
@@ -40,7 +40,7 @@ describe('use-async-image-loader', () => {
     uri           | error            | image
     ${SUCESS_URI} | ${null}          | ${SUCESS_URI}
     ${ERROR_URI}  | ${ERROR_MESSAGE} | ${null}
-  `('test $uri', async ({ uri, error, image }) => {
+  `('should run with uri = $uri', async ({ uri, error, image }) => {
     const { waitForNextUpdate, result } = renderHook({ uri });
     expect(result.current.errorMessage).toBeNull();
     expect(result.current.isLoading).toBeTruthy();
@@ -49,5 +49,11 @@ describe('use-async-image-loader', () => {
     expect(result.current.errorMessage).toBe(error);
     expect(result.current.isLoading).toBeFalsy();
     expect(result.current.image).toBe(image);
+  });
+
+  it('should unmount', () => {
+    const { unmount } = renderHook();
+    unmount();
+    expect(URL.createObjectURL).not.toBeCalled();
   });
 });
