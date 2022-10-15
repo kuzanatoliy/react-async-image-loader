@@ -20,13 +20,19 @@ export const useAsyncImageLoader: IUseAsyncImageLoader = ({ uri }) => {
   });
 
   useEffect(() => {
-    fetch(uri)
+    const controller = new AbortController();
+
+    fetch(uri, {
+      signal: controller.signal,
+    })
       .then((res) => res.blob())
       .then((blob) => setData((prevState) => ({ ...prevState, image: URL.createObjectURL(blob) })))
       .catch((error) => setData((prevState) => ({ ...prevState, errorMessage: error.message })))
       .finally(() => {
         setData((prevState) => ({ ...prevState, isLoading: false }));
       });
+
+    () => controller.abort();
   }, []);
 
   return data;
