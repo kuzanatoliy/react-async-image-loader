@@ -33,7 +33,7 @@ export const useAsyncImageLoader: IUseAsyncImageLoader = ({ uri }) => {
       });
 
     return () => controller.abort();
-  }, []);
+  }, [uri]);
 
   return data;
 };
