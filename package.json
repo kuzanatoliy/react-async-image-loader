@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Async image loader for react library",
   "scripts": {
+    "clean-artifacts": "node utils/clean.js",
+    "build": "tsc",
+    "build:local": "yarn run clean-artifacts && yarn run build",
     "prettier:write": "prettier --write .",
     "prettier:check": "prettier --check .",
     "storybook": "start-storybook -p 6006",
@@ -36,9 +39,6 @@
     "typescript": "^4.8.4"
   },
   "dependencies": {
-    "@emotion/react": "^11.10.4",
-    "@emotion/styled": "^11.10.4",
-    "@mui/material": "^5.10.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }
