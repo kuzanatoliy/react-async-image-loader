@@ -1,6 +1,6 @@
 {
-  "name": "react-async-image-loader",
-  "version": "1.0.1",
+  "name": "@kuzanatoliorg/react-async-image-loader",
+  "version": "1.0.0",
   "description": "Async image loader for react library",
   "scripts": {
     "clean-artifacts": "node utils/clean.js",
