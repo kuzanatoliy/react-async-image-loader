@@ -29,7 +29,6 @@ jobs:
           git push
           git push --tags
           git add -f dist types
-          git rm -f -r .github .husky src utils .gitignore tsconfig.json yarn.lock
       - name: publish
         run: npm publish --access public
         env:
