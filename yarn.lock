@@ -1437,10 +1437,10 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
-"@kuzanatoliorg/testing-library-react-utils@^1.6.0":
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/@kuzanatoliorg/testing-library-react-utils/-/testing-library-react-utils-1.6.0.tgz#a2373df948e4f3ce13b99ea9a7acb4e9b38bd051"
-  integrity sha512-tKyp03XhUpAbgMOWXWvCX5l3UNF7uu6NyiNqEQVuFxblRix8Gufd5QFVtq3mi3AM006ly7Ov2kqhve+6RC0Uuw==
+"@kuzanatoliorg/testing-library-react-utils@^1.8.0":
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/@kuzanatoliorg/testing-library-react-utils/-/testing-library-react-utils-1.8.0.tgz#585a9e937bf1bc9fcffc47b5ccec84a753dcbdb4"
+  integrity sha512-xU9czqddUvRrcoBgCvApdC67OzM/z2mG3rY1pPyyG+P/ejYRfoV9s8Ykn9Ux1KrepF1ayooUqQV7VeBeQXRKlA==
   dependencies:
     "@testing-library/react" ">=13.0.0"
     "@testing-library/react-hooks" ">=8.0.0"
@@ -2718,9 +2718,9 @@
   integrity sha512-FGa1F62FT09qcrueBA6qYTrJPVDzah9a+493+o2PCXsesWHIn27G98TsSMs3WPNbZIEj4+VJf6saSFpvD+3Zsw==
 
 "@types/react-dom@^18.0.0":
-  version "18.0.8"
-  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-18.0.8.tgz#d2606d855186cd42cc1b11e63a71c39525441685"
-  integrity sha512-C3GYO0HLaOkk9dDAz3Dl4sbe4AKUGTCfFIZsz3n/82dPNN8Du533HzKatDxeUYWu24wJgMP1xICqkWk1YOLOIw==
+  version "18.0.9"
+  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-18.0.9.tgz#ffee5e4bfc2a2f8774b15496474f8e7fe8d0b504"
+  integrity sha512-qnVvHxASt/H7i+XG1U1xMiY5t+IHcPGUK7TDMDzom08xa7e86eCeKOiLZezwCKVxJn6NEiiy2ekgX8aQssjIKg==
   dependencies:
     "@types/react" "*"
 
